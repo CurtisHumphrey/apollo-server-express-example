@@ -1,0 +1,12 @@
+.dockerignore
+.editorconfig
+.git
+.gitignore
+.nvmrc
+.trc
+.vscode
+coverage
+Dockerfile
+local.env
+node_modules
+README.md

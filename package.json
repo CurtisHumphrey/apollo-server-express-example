@@ -1,0 +1,51 @@
+{
+  "name": "apollo-server-express-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "npm run undevelop && docker-compose up",
+    "start:dev": "nodemon ./src/index.js | pino-pretty",
+    "start": "node ./src/index.js | pino",
+    "undevelop": "docker-compose down"
+  },
+  "keywords": [],
+  "author": "A started project for Express-Apollo-based GraphQL servers",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.17.0"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-pino-logger": "^4.0.0",
+    "graphql": "^14.1.1",
+    "graphql-type-json": "^0.2.1",
+    "helmet": "^3.15.1",
+    "lodash": "^4.17.11",
+    "lodash.merge": "^4.6.1",
+    "pino": "^5.11.1",
+    "pino-pretty": "^2.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/.bin/lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "./node_modules/.bin/eslint --fix ./src",
+      "git add"
+    ]
+  }
+}
