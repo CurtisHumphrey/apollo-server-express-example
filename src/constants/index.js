@@ -1,5 +1,3 @@
-// Example file where you would place your application constants
-
 exports.BASEBALL_TEAMS = {
   ANGELS: 'Angels',
   CARDINALS: 'Cardinals',

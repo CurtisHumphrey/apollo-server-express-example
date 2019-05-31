@@ -1,13 +1,12 @@
 version: "3"
 services:
   api:
+    restart: always
     build:
       context: .
       dockerfile: ./Dockerfile.local
-    environment:
-      - LOCAL=true
-      - NODE_ENV=development
-      - PORT=3000
+    env_file:
+      - ./local.env
     expose:
       - 3000
     ports:
@@ -15,3 +14,11 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
+    depends_on:
+      - database
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./etc/data/db:/data/db

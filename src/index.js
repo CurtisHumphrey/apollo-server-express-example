@@ -1,4 +1,3 @@
-require('./lib/cache/configure')
 const pipe = require('lodash/fp/pipe')
 const { logger } = require('./lib/logger')
 const { applyApolloServerToExpressApp } = require('./lib/graphqlServer')
