@@ -1,20 +1,9 @@
-const { ApolloServer, makeExecutableSchema } = require('apollo-server-express')
-const { applySchemaCustomDirectives } = require('graphql-custom-directives')
+const { ApolloServer } = require('apollo-server-express')
 
 // GraphQL Entities
 const resolvers = require('./resolvers')
 const schemaDirectives = require('./schemaDirectives')
 const typeDefs = require('./typeDefs')
-
-/**
- * Creates an executable schema and applies custom directives
- */
-const getSchema = ({ typeDefs, resolvers, schemaDirectives }) => {
-  const schema = makeExecutableSchema({ typeDefs, resolvers })
-  schema._directives.push.apply(schema._directives, schemaDirectives)
-  applySchemaCustomDirectives(schema)
-  return schema
-}
 
 /**
  * Function to create configured Apollo server instance
@@ -31,9 +20,9 @@ const createApolloServer = () =>
     formatResponse: function(response) {
       return response
     },
-    mocks: true,
-    mockEntireSchema: false,
-    schema: getSchema({ typeDefs, resolvers, schemaDirectives })
+    resolvers,
+    schemaDirectives,
+    typeDefs
   })
 
 /**

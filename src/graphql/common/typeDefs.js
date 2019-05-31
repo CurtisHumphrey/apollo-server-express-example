@@ -1,6 +1,11 @@
 const { gql } = require('apollo-server-express')
 
 const typeDefs = gql`
+  # Directives
+  directive @formattableDate(
+    format: String = "mmmm d, yyyy"
+  ) on FIELD_DEFINITION
+
   # Defines custom GraphQL scalars
   scalar DateTime
   scalar EmailAddress

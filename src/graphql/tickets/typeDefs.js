@@ -5,29 +5,15 @@
 const { gql } = require('apollo-server')
 
 const typeDefs = gql`
-  input TicketsFilter {
-    id: ID
-    ownedBy: ID
-    sport: Sport!
-  }
-
-  type Ticket implements Ownable & Temporal {
-    createdAt: String!
-    createdBy: User!
+  type Ticket {
+    createdAt: String! @formattableDate
     id: ID!
-    ownedBy: User
     sport: Sport!
-    updatedAt: String!
-  }
-
-  type TicketsResult {
-    results: [Ticket]!
-    pagination: PaginationResult!
+    updatedAt: String! @formattableDate
   }
 
   extend type Query {
-    ticket(id: ID!): Ticket!
-    tickets(where: TicketsFilter, pagination: PaginationInput): TicketsResult!
+    tickets: [Ticket]!
   }
 `
 

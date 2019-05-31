@@ -5,6 +5,7 @@ const common = require('../../graphql/common')
 const enums = require('../../graphql/enums')
 
 // Domain Entities
+const tickets = require('../../graphql/tickets')
 
 /**
  * Required basic bootstrapping typedefs
@@ -22,4 +23,9 @@ const baseTypeDefs = gql`
 /**
  * Rest of the typedefs
  */
-module.exports = [baseTypeDefs, common.typeDefs, enums.typeDefs]
+module.exports = [
+  baseTypeDefs,
+  common.typeDefs,
+  enums.typeDefs,
+  tickets.typeDefs
+]

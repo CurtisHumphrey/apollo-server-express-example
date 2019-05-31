@@ -1,13 +1,16 @@
-/**
- * Resolvers for a Domain-specific type
- */
+const moment = require('moment')
+
+const createTicket = () => ({
+  id: () => 5,
+  createdAt: (...args) => '2016-01-01T00:00:00',
+  updatedAt: () => moment().toISOString(),
+  sport: () => 'football'
+})
 
 const resolvers = {
-  User: {
-    tickets: (parent, args, { dataSources: { ticketsService } }) =>
-      ticketsService.getTicketsOfType('BASEBALL')
-  },
-  Query: {}
+  Query: {
+    tickets: () => [createTicket()]
+  }
 }
 
 module.exports = resolvers

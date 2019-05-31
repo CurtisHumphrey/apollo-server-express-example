@@ -6,6 +6,7 @@ const common = require('../../graphql/common')
 const enums = require('../../graphql/enums')
 
 // Domain Entities
+const tickets = require('../../graphql/tickets')
 
 /**
  * Required basic bootstrapping resolvers
@@ -25,4 +26,9 @@ const baseResolvers = {
 /**
  * Rest of the resolvers
  */
-module.exports = merge(baseResolvers, common.resolvers, enums.resolvers)
+module.exports = merge(
+  baseResolvers,
+  common.resolvers,
+  enums.resolvers,
+  tickets.resolvers
+)
