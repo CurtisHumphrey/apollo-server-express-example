@@ -22,3 +22,14 @@ services:
       - "27017:27017"
     volumes:
       - ./etc/data/db:/data/db
+  test:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.test
+    env_file:
+      - ./local.env
+    volumes:
+      - /app/node_modules
+      - .:/app
+    depends_on:
+      - database

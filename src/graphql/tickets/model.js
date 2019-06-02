@@ -1,5 +1,5 @@
-const values = require('lodash/values')
 const mongoose = require('mongoose')
+const values = require('lodash/values')
 const mongooseDelete = require('mongoose-delete')
 const { SPORTS } = require('../../constants')
 

@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json .
+RUN npm install --no-audit
+
+COPY jest.config.js .
+COPY ./src .
+
+CMD ["npm", "run", "test:watch"]

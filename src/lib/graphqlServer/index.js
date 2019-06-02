@@ -42,11 +42,13 @@ const createApolloServer = () =>
     validationRules
   })
 
+exports.createApolloServer = createApolloServer
+
 /**
  * Applies Apollo Server middleware to an Express instance
  */
 exports.applyApolloServerToExpressApp = expressApp => {
   const apolloServer = createApolloServer()
-  apolloServer.applyMiddleware({ app: expressApp, path: '/management' })
+  apolloServer.applyMiddleware({ app: expressApp })
   return expressApp
 }

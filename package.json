@@ -11,11 +11,13 @@
   "scripts": {
     "commit": "git-cz",
     "develop": "npm run undevelop && docker-compose up",
+    "generate:module": "hygen module with-prompt",
     "lint": "lint-staged",
     "release": "semantic-release",
     "semantic-release": "semantic-release",
     "start:dev": "nodemon ./src/index.js | pino-pretty",
     "start": "node ./src/index.js | pino",
+    "test:watch": "jest --watchAll",
     "undevelop": "docker-compose down"
   },
   "keywords": [
