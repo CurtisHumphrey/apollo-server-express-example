@@ -13,10 +13,11 @@ const tickets = require('../../graphql/tickets')
 const baseTypeDefs = gql`
   scalar JSON
   type Query {
-    status: String!
+    facepalm: String! @complexity(value: 1)
+    status: String! @complexity(value: 1)
   }
   type Mutation {
-    status: String!
+    status: String! @complexity(value: 1)
   }
 `
 

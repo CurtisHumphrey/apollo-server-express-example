@@ -6,6 +6,8 @@ const typeDefs = gql`
     format: String = "mmmm d, yyyy"
   ) on FIELD_DEFINITION
 
+  directive @complexity(value: Int!, multipliers: [String!]) on FIELD_DEFINITION
+
   # Defines custom GraphQL scalars
   scalar DateTime
   scalar EmailAddress

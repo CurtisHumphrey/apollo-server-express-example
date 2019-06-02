@@ -13,6 +13,7 @@ const tickets = require('../../graphql/tickets')
  */
 const baseResolvers = {
   Query: {
+    facepalm: () => 'This should fail',
     status: () => 'Base Query up and running!'
   },
 

@@ -1,9 +1,23 @@
-const { ApolloServer } = require('apollo-server-express')
+const { ApolloServer, makeExecutableSchema } = require('apollo-server-express')
+const { applyMiddleware } = require('graphql-middleware')
 
-// GraphQL Entities
+// Configuration Entities
+const permissions = require('./permissions')
 const resolvers = require('./resolvers')
 const schemaDirectives = require('./schemaDirectives')
 const typeDefs = require('./typeDefs')
+const validationRules = require('./validationRules')
+
+/**
+ * Creates enhanced executable schema
+ * @param {*} schema
+ * @param  {...any} middlewares
+ */
+const createExecutableSchema = (options, ...middlewares) => {
+  const schema = makeExecutableSchema(options)
+  const enhancedSchema = applyMiddleware(schema, ...middlewares)
+  return enhancedSchema
+}
 
 /**
  * Function to create configured Apollo server instance
@@ -20,9 +34,12 @@ const createApolloServer = () =>
     formatResponse: function(response) {
       return response
     },
-    resolvers,
+    schema: createExecutableSchema(
+      { resolvers, typeDefs, schemaDirectives },
+      permissions
+    ),
     schemaDirectives,
-    typeDefs
+    validationRules
   })
 
 /**
