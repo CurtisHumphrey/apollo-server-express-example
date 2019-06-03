@@ -78,7 +78,7 @@
     "mongoose-delete": "^0.5.0",
     "mongoose-unique-array": "^0.3.1",
     "pino": "^5.12.6",
-    "pino-pretty": "^2.5.0"
+    "pino-pretty": "^3.1.0"
   },
   "husky": {
     "hooks": {
