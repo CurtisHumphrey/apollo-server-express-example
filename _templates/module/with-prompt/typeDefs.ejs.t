@@ -1,6 +1,6 @@
 ---
 to: src/graphql/<%=name%>/typeDefs.js
---
+---
 <%
  CapitalName = h.inflection.capitalize(name)
  SingularCapitalName = h.inflection.singularize(CapitalName)

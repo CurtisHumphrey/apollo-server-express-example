@@ -1,6 +1,6 @@
 ---
 to: src/graphql/<%=name%>/spec.js
---
+---
 const _ = require('lodash')
 const _fp = require('lodash/fp')
 const { gql } = require('apollo-server-express')

@@ -1,6 +1,6 @@
 ---
 to: src/graphql/<%=name%>/permissions.js
---
+---
 const _fp = require('lodash/fp')
 const { rule } = require('graphql-shield')
 const { ForbiddenError } = require('apollo-server-express')
@@ -16,8 +16,10 @@ const notAllowed = rule({ cache: 'strict' })((parent, args, ctx, info) =>
  * Collect permissions
  */
 const permissions = {
-  <%=name%>: {
-    field: notAllowed
+  Query: {
+    <%=name%>: {
+      field: notAllowed
+    }
   }
 }
 
