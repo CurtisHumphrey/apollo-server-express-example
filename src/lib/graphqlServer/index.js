@@ -1,5 +1,6 @@
 const { ApolloServer, makeExecutableSchema } = require('apollo-server-express')
 const { applyMiddleware } = require('graphql-middleware')
+const { apolloEngineConfiguration } = require('../environment')
 
 // Configuration Entities
 const permissions = require('./permissions')
@@ -28,6 +29,7 @@ const createApolloServer = () =>
     context: ({ req }) => ({
       req
     }),
+    engine: apolloEngineConfiguration,
     formatError: function(error) {
       return error
     },
