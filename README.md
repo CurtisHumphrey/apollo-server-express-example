@@ -8,12 +8,12 @@ _A boilerplate for building Express-backed GraphQL servers with best practices a
 
 ### Generators
 
-We use the awesome [hygen](http://www.hygen.io/) generator to automatically create components, stories and tests.
+We use the awesome [hygen](http://www.hygen.io/) generator to automatically create domain modules.
 
-The generators live alongside this project in the `/_templates` folder. The available generators are:
+The generators live in this project in the `/_templates` folder. The available generators are:
 
 ```bash
-
+npm run generate:module
 ```
 
 ### Committing
@@ -87,8 +87,8 @@ npm run service:push -- --endpoint=http://localhost:3000/graphql
 
 ## Todo
 
-- [ ] Add automatic schema checks and push as CI step
-- [ ] Fix generator errors
+- [ ] Add automatic service checks and push as CI step
+- [x] Fix generator errors
 - [ ] Deploy example project
 
 ## License
