@@ -51,7 +51,7 @@
     "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
     "local-repl": "^4.0.0",
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.19.1",
     "prettier": "^1.17.1",
     "semantic-release": "^15.13.12"
   },
