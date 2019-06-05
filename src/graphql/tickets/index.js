@@ -9,5 +9,5 @@ module.exports = {
   permissions,
   resolvers,
   service,
-  typeDefs
+  typeDefs,
 }

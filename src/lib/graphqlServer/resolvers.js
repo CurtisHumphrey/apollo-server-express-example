@@ -14,14 +14,14 @@ const tickets = require('../../graphql/tickets')
 const baseResolvers = {
   Query: {
     facepalm: () => 'This should fail',
-    status: () => 'Base Query up and running!'
+    status: () => 'Base Query up and running!',
   },
 
   Mutation: {
-    status: () => 'Base Mutation up and running!'
+    status: () => 'Base Mutation up and running!',
   },
 
-  JSON: GraphQLJSON
+  JSON: GraphQLJSON,
 }
 
 /**

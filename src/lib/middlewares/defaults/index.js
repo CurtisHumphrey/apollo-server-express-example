@@ -27,7 +27,7 @@ exports.instantiateExpress = () => express()
  * Configures Express instance with some basic middlewares
  * Adds heartbeat handler to Express server
  */
-exports.configureExpressInstance = app => {
+exports.configureExpressInstance = (app) => {
   app.use(compression())
   app.use(cors())
   app.use(helmet())

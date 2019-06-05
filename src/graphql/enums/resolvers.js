@@ -6,7 +6,7 @@ const { BASEBALL_TEAMS, SPORTS } = require('../../constants')
 
 const resolvers = {
   BaseballTeam: BASEBALL_TEAMS,
-  Sport: SPORTS
+  Sport: SPORTS,
 }
 
 module.exports = resolvers

@@ -5,5 +5,5 @@ const tickets = require('./tickets')
 module.exports = {
   common,
   enums,
-  tickets
+  tickets,
 }

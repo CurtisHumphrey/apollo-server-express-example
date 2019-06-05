@@ -8,11 +8,11 @@ const schema = mongoose.Schema(
     sport: {
       enum: values(SPORTS),
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 )
 

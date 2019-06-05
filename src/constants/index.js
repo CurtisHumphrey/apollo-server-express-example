@@ -3,11 +3,11 @@ exports.BASEBALL_TEAMS = {
   CARDINALS: 'Cardinals',
   CUBS: 'Cubs',
   RED_SOX: 'Red Sox',
-  WHITE_SOX: 'White Sox'
+  WHITE_SOX: 'White Sox',
 }
 
 exports.SPORTS = {
   BASEBALL: 'baseball',
   FOOTBALL: 'football',
-  HOCKEY: 'hockey'
+  HOCKEY: 'hockey',
 }

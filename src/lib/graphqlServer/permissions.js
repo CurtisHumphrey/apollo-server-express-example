@@ -10,8 +10,8 @@ const tickets = require('../../graphql/tickets')
  */
 const basePermissions = {
   Query: {
-    facepalm: isAdmin
-  }
+    facepalm: isAdmin,
+  },
 }
 
 /**

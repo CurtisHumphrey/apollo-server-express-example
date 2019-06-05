@@ -28,5 +28,5 @@ module.exports = [
   baseTypeDefs,
   common.typeDefs,
   enums.typeDefs,
-  tickets.typeDefs
+  tickets.typeDefs,
 ]

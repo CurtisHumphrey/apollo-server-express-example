@@ -4,7 +4,7 @@ const { logger } = require('./lib/logger')
 const { applyApolloServerToExpressApp } = require('./lib/graphqlServer')
 const {
   configureExpressInstance,
-  instantiateExpress
+  instantiateExpress,
 } = require('./lib/middlewares/defaults')
 
 /**
