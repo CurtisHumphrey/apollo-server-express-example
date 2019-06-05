@@ -8,7 +8,7 @@ const { SPORTS } = require('../../constants')
  */
 const isBaseball = _fp.pipe(
   _fp.get('sport'),
-  sport => sport(),
+  (sport) => sport(),
   _fp.isEqual(SPORTS.BASEBALL)
 )
 
@@ -24,8 +24,8 @@ const notAllowed = rule({ cache: 'strict' })((parent, args, ctx, info) =>
  */
 const permissions = {
   Ticket: {
-    sport: notAllowed
-  }
+    sport: notAllowed,
+  },
 }
 
 module.exports = permissions

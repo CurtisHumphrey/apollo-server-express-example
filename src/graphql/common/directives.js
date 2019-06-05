@@ -16,7 +16,7 @@ class DateDirective extends SchemaDirectiveVisitor {
     // Adds argument
     field.args.push({
       name: 'format',
-      type: GraphQLString
+      type: GraphQLString,
     })
 
     // Enhances resolver
@@ -28,5 +28,5 @@ class DateDirective extends SchemaDirectiveVisitor {
 }
 
 module.exports = {
-  formattableDate: DateDirective
+  formattableDate: DateDirective,
 }

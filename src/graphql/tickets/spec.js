@@ -15,7 +15,7 @@ let testClient = null
 const hasSports = _fp.pipe(
   _fp.get('data.tickets'),
   _fp.map(_fp.get('sport')),
-  _fp.all(sport => _.keys(SPORTS).includes(sport))
+  _fp.all((sport) => _.keys(SPORTS).includes(sport))
 )
 
 describe('tickets', () => {

@@ -11,7 +11,7 @@ const {
   EmailAddress,
   URL,
   PhoneNumber,
-  PostalCode
+  PostalCode,
 } = require('@okgrow/graphql-scalars')
 
 const resolvers = {
@@ -27,7 +27,7 @@ const resolvers = {
   EmailAddress,
   URL,
   PhoneNumber,
-  PostalCode
+  PostalCode,
 }
 
 module.exports = resolvers

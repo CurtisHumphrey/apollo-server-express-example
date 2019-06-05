@@ -1,13 +1,13 @@
 const {
   default: queryComplexity,
   directiveEstimator,
-  simpleEstimator
+  simpleEstimator,
 } = require('graphql-query-complexity')
 const { logger } = require('../logger')
 
 const complexityRule = queryComplexity({
   maximumComplexity: 100,
-  onComplete: complexity => {
+  onComplete: (complexity) => {
     logger.info(`Determined query complexity: ${complexity}`)
   },
   createError: (max, actual) => {
@@ -17,12 +17,12 @@ const complexityRule = queryComplexity({
   },
   estimators: [
     directiveEstimator({
-      name: 'complexity'
+      name: 'complexity',
     }),
     simpleEstimator({
-      defaultComplexity: 1
-    })
-  ]
+      defaultComplexity: 1,
+    }),
+  ],
 })
 
 module.exports = [complexityRule]

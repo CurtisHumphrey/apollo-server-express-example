@@ -5,5 +5,5 @@ const typeDefs = require('./typeDefs')
 module.exports = {
   directives,
   resolvers,
-  typeDefs
+  typeDefs,
 }

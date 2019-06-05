@@ -12,7 +12,7 @@ const getUserRole = _fp.get('user.role')
  * has a specific role
  * @param {String} role
  */
-const createRoleChecker = role =>
+const createRoleChecker = (role) =>
   _fp.pipe(
     getUserRole,
     _fp.isEqual(role)
@@ -32,5 +32,5 @@ const isAdmin = rule({ cache: 'contextual' })(
 )
 
 module.exports = {
-  isAdmin
+  isAdmin,
 }

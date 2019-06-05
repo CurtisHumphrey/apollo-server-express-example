@@ -27,7 +27,7 @@ const createExecutableSchema = (options, ...middlewares) => {
 const createApolloServer = () =>
   new ApolloServer({
     context: ({ req }) => ({
-      req
+      req,
     }),
     engine: apolloEngineConfiguration,
     formatError: function(error) {
@@ -41,7 +41,7 @@ const createApolloServer = () =>
       permissions
     ),
     schemaDirectives,
-    validationRules
+    validationRules,
   })
 
 exports.createApolloServer = createApolloServer
@@ -49,7 +49,7 @@ exports.createApolloServer = createApolloServer
 /**
  * Applies Apollo Server middleware to an Express instance
  */
-exports.applyApolloServerToExpressApp = expressApp => {
+exports.applyApolloServerToExpressApp = (expressApp) => {
   const apolloServer = createApolloServer()
   apolloServer.applyMiddleware({ app: expressApp })
   return expressApp
