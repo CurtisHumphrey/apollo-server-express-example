@@ -6930,7 +6930,7 @@ mongoose-unique-array@^0.3.1:
   resolved "https://registry.yarnpkg.com/mongoose-unique-array/-/mongoose-unique-array-0.3.1.tgz#8371532223ff462d190b037bf1d14b2e16ddd42e"
   integrity sha512-Cd76M02EUwJ7pb3yfocjyaGmBu/iNJpvmhwF+KvSioB8PUUurgKorzNnF3yX27adVWCyxc9m1MiRhZsOFP1F7Q==
 
-mongoose@^5.5.12:
+mongoose@^5.5.13:
   version "5.5.13"
   resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.5.13.tgz#3890052be742d069f97c8b03c278f0b44628e93c"
   integrity sha512-+RueYqq7fb8gu4wXkUsPa2B0R4JWnyYuN0+s3BCPpe3Rn3XndPPKhrx9OId3fMiuGX4jbG/HL2ZDoliiftDY7w==
