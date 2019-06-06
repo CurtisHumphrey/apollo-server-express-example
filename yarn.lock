@@ -4384,7 +4384,7 @@ graphql-query-complexity@^0.3.0:
   dependencies:
     lodash.get "^4.4.2"
 
-graphql-shield@^5.3.5:
+graphql-shield@^5.3.6:
   version "5.3.6"
   resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-5.3.6.tgz#20061b02f77056c0870a623c530ef28a1bf4fff4"
   integrity sha512-ihw/i4X+d1kpj1SVA6iBkVl2DZhPsI+xV08geR2TX3FWhpU7zakk/16yBzDRJTTCUgKsWfgyebrgIBsuhTwMnA==
