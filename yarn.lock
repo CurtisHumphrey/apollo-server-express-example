@@ -1531,7 +1531,7 @@ apollo-server-testing@^2.6.1:
   dependencies:
     apollo-server-core "2.6.1"
 
-apollo-server@^2.4.8:
+apollo-server@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.6.1.tgz#1b1fc6020b75c0913550da5fa0f2005c62f1bc53"
   integrity sha512-Ed0zZjluRYPMC3Yr6oXQjcR11izu86nkjiS2MhjJA1mF8IXJfxbPp2hnX4Jf4vXPSkOP2e5ZHw0cdaIcu9GnRw==
@@ -3384,7 +3384,7 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^4.2.0:
+eslint-config-prettier@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
   integrity sha512-sZwhSTHVVz78+kYD3t5pCWSYEdVSBR0PXnwjDRsUs8ytIrK8PLXw+6FKp8r3Z7rx4ZszdetWlXYKOHoUrrwPlA==
@@ -4384,7 +4384,7 @@ graphql-query-complexity@^0.3.0:
   dependencies:
     lodash.get "^4.4.2"
 
-graphql-shield@^5.3.5:
+graphql-shield@^5.3.6:
   version "5.3.6"
   resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-5.3.6.tgz#20061b02f77056c0870a623c530ef28a1bf4fff4"
   integrity sha512-ihw/i4X+d1kpj1SVA6iBkVl2DZhPsI+xV08geR2TX3FWhpU7zakk/16yBzDRJTTCUgKsWfgyebrgIBsuhTwMnA==
@@ -4436,6 +4436,13 @@ graphql@~14.2.1:
   version "14.2.1"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.2.1.tgz#779529bf9a01e7207b977a54c20670b48ca6e95c"
   integrity sha512-2PL1UbvKeSjy/lUeJqHk+eR9CvuErXoCNwJI4jm3oNFEeY+9ELqHNKO1ZuSxAkasPkpWbmT/iMRMFxd3cEL3tQ==
+  dependencies:
+    iterall "^1.2.2"
+
+graphql@~14.3.1:
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.3.1.tgz#b3aa50e61a841ada3c1f9ccda101c483f8e8c807"
+  integrity sha512-FZm7kAa3FqKdXy8YSSpAoTtyDFMIYSpCDOr+3EqlI1bxmtHu+Vv/I2vrSeT1sBOEnEniX3uo4wFhFdS/8XN6gA==
   dependencies:
     iterall "^1.2.2"
 
