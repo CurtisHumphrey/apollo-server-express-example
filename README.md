@@ -13,7 +13,7 @@ We use the awesome [hygen](http://www.hygen.io/) generator to automatically crea
 The generators live in this project in the `/_templates` folder. The available generators are:
 
 ```bash
-npm run generate:module
+npm run create
 ```
 
 ### Committing

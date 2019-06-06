@@ -11,7 +11,7 @@
   "scripts": {
     "commit": "git-cz",
     "develop": "npm run undevelop && docker-compose up",
-    "generate:module": "hygen module with-prompt",
+    "create": "hygen --prompt",
     "lint": "lint-staged",
     "release": "semantic-release",
     "repl": "local-repl",
@@ -47,7 +47,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.0",
-    "hygen": "^4.0.2",
+    "hygen": "https://github.com/CurtisHumphrey/hygen.git",
     "jest": "^24.8.0",
     "lint-staged": "^8.2.0",
     "local-repl": "^4.0.0",
