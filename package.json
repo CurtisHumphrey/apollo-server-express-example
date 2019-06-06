@@ -4,25 +4,12 @@
   "description": "An Apollo Server + Express API boilerplate project with some best practices",
   "author": "masiamj",
   "license": "MIT",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masiamj/apollo-server-express-example.git"
+  },
   "engines": {
     "node": ">=10"
-  },
-  "scripts": {
-    "commit": "git-cz",
-    "develop": "npm run undevelop && docker-compose up",
-    "generate:module": "hygen module with-prompt",
-    "lint": "lint-staged",
-    "release": "semantic-release",
-    "repl": "local-repl",
-    "semantic-release": "semantic-release",
-    "service:check": "apollo service:check",
-    "service:push": "apollo service:push",
-    "start:dev": "nodemon ./src/index.js | pino-pretty",
-    "start": "node ./src/index.js | pino",
-    "test": "docker-compose exec api ./node_modules/.bin/jest --forceExit",
-    "test:watch": "docker-compose exec api ./node_modules/.bin/jest --watchAll",
-    "undevelop": "docker-compose down"
   },
   "keywords": [
     "apollo",
@@ -30,6 +17,41 @@
     "graphql",
     "node"
   ],
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "develop": "npm run undevelop && docker-compose up",
+    "generate:module": "hygen module with-prompt",
+    "lint": "eslint --fix --cache ./src *.js",
+    "lint-staged": "lint-staged",
+    "release": "semantic-release",
+    "repl": "local-repl",
+    "semantic-release": "semantic-release",
+    "service:check": "apollo service:check",
+    "service:push": "apollo service:push",
+    "start:dev": "nodemon ./src/index.js | pino-pretty",
+    "start": "node ./src/index.js | pino",
+    "test": "docker-compose exec api jest --forceExit",
+    "test:watch": "docker-compose exec api ./node_modules/.bin/jest --watchAll",
+    "undevelop": "docker-compose down"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "eslint --fix ./src",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
@@ -83,26 +105,5 @@
     "mongoose-unique-array": "^0.3.1",
     "pino": "^5.12.6",
     "pino-pretty": "^3.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "./node_modules/.bin/commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "./node_modules/.bin/lint-staged"
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.js": [
-      "./node_modules/.bin/eslint --fix ./src",
-      "git add"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/masiamj/apollo-server-express-example.git"
   }
 }

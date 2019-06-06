@@ -4,7 +4,7 @@ module.exports = {
   client: {
     service: {
       name: 'apollo-server-express-example',
-      url: 'http://localhost:3000/graphql' // @FIXME
-    }
-  }
+      url: 'http://localhost:3000/graphql', // @FIXME
+    },
+  },
 }
